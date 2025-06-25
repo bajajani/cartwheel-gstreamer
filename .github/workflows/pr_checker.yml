@@ -6,7 +6,7 @@ on:
 
 jobs:
   pr-build:
-      uses: intel-sandbox/client-media-ci/.github/workflows/on-dispatch.yml@main
+      uses: intel-sandbox/client-media-ci/repository-dispatch@main
       with:
         token: ${{ secrets.GST_CARTWHEEL }}
         repository: intel-sandbox/client-media-ci
