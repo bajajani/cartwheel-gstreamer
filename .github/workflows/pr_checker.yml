@@ -6,7 +6,10 @@ on:
 
 jobs:
   pr-build:
-      uses: intel-sandbox/client-media-ci/repository-dispatch@main
+    runs-on: self-hosted
+    steps:
+    - name: Trigger repository dispatch in repo B
+      uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.GST_CARTWHEEL }}
         repository: intel-sandbox/client-media-ci
